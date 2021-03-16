@@ -1,0 +1,73 @@
+{
+  "name": "ringcentral-embeddable-mobile-framework",
+  "version": "0.0.3",
+  "description": "RingCentral embeddable mobile app framework",
+  "main": "bin/rcem-create.js",
+  "bin": {
+    "ringcentral-embeddable-mobile-framework": "bin/rcem-create.js",
+    "rcemc": "bin/rcem-create.js"
+  },
+  "keywords": [
+    "ringcentral",
+    "mobile",
+    "embeddable",
+    "ios",
+    "android",
+    "cordova",
+    "framework"
+  ],
+  "scripts": {
+    "lint": "standard",
+    "fix": "standard --fix",
+    "jest": "jest --coverage",
+    "test": "npm run jest",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  },
+  "devDependencies": {
+    "coveralls": "^3.1.0",
+    "jest": "^26.6.3",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "commander": "^7.1.0",
+    "download": "^8.0.0",
+    "prompts": "^2.4.0",
+    "shelljs": "^0.8.4"
+  },
+  "author": "Drake Zhao <drake.zhao@ringcentral.com>",
+  "license": "MIT",
+  "standard": {
+    "ignore": [
+      "/temp/",
+      "/dist/"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "./tests"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "setupFiles": [
+      "dotenv-override-true/config"
+    ]
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "files": [
+    "bin",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ringcentral/ringcentral-embeddable-mobile-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ringcentral/ringcentral-embeddable-mobile-framework/issues"
+  },
+  "homepage": "https://github.com/ringcentral/ringcentral-embeddable-mobile-framework#readme"
+}
