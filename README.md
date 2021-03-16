@@ -19,7 +19,7 @@ npx ringcentral-embeddable-mobile-framework my-app
 or
 
 ```sh
-npm i ringcentral-embeddable-mobile-framework
+npm i -g ringcentral-embeddable-mobile-framework
 ringcentral-embeddable-mobile-framework my-app
 ```
 
