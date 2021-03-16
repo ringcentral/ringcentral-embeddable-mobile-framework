@@ -92,7 +92,10 @@ async function editFiles (from, res) {
     keywords: pkgInfo.keywords,
     scripts: pkgInfo.scripts,
     devDependencies: pkgInfo.devDependencies,
-    dependencies: pkgInfo.dependencies
+    dependencies: pkgInfo.dependencies,
+    author: pkgInfo.author,
+    cordova: pkgInfo.cordova,
+    standard: pkgInfo
   }
   writeFileSync(
     pkg,
