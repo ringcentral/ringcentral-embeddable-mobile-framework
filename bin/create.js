@@ -7,12 +7,25 @@ const os = require('os')
 const { log } = console
 const tempDir = os.tmpdir()
 
-const supportedLanguage = {
-  js: {
+const templates = {
+  office: {
     zip: 'https://github.com/ringcentral/ringcentral-embeddable-mobile-template/archive/main.zip',
+    title: 'RingCentral',
     folderName: 'ringcentral-embeddable-mobile-template-main'
+  },
+  ev: {
+    zip: 'https://github.com/ringcentral/ringcentral-embeddable-engage-voice-embeddable-mobile-template/archive/main.zip',
+    title: 'RingCentral Engage Voice',
+    folderName: 'ringcentral-embeddable-engage-voice-embeddable-mobile-template-main'
   }
 }
+
+const choices = templates.map(k => {
+  return {
+    title: k.title,
+    value: k
+  }
+})
 
 const questions = [
   {
@@ -40,6 +53,13 @@ const questions = [
       }
       return true
     }
+  },
+  {
+    name: 'template',
+    type: 'select',
+    message: 'Pick a template(If you are a Engage Voice user, choose RingCentral)',
+    initial: 0,
+    choices: choices
   },
   {
     name: 'version',
@@ -133,9 +153,11 @@ module.exports = async function ask ({ path: targetPath, name, auto }) {
   console.log(res)
   res.npmName = res.name.replace(/\s+/g, '-')
   echo('building')
-  const language = 'js'
-  const obj = supportedLanguage[language]
-  const { zip, folderName } = obj
+  let { template } = res
+  template = typeof template === 'object'
+    ? template
+    : choices[template]
+  const { zip, folderName } = template
   const from = resolve(tempDir, folderName)
   await fetchZip(zip, from)
   await editFiles(from, res)
