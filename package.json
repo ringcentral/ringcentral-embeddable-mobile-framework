@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-embeddable-mobile-framework",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "RingCentral embeddable mobile app framework",
   "main": "bin/rcem-create.js",
   "bin": {

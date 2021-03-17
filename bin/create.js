@@ -14,9 +14,9 @@ const templates = [
     folderName: 'ringcentral-embeddable-mobile-template-main'
   },
   {
-    zip: 'https://github.com/ringcentral/ringcentral-embeddable-engage-voice-embeddable-mobile-template/archive/master.zip',
+    zip: 'https://github.com/ringcentral/ringcentral-engage-voice-embeddable-mobile-template/archive/master.zip',
     title: 'RingCentral Engage Voice',
-    folderName: 'ringcentral-embeddable-engage-voice-embeddable-mobile-template-master'
+    folderName: 'ringcentral-engage-voice-embeddable-mobile-template-master'
   }
 ]
 
