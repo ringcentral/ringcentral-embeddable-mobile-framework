@@ -7,18 +7,18 @@ const os = require('os')
 const { log } = console
 const tempDir = os.tmpdir()
 
-const templates = {
-  office: {
+const templates = [
+  {
     zip: 'https://github.com/ringcentral/ringcentral-embeddable-mobile-template/archive/main.zip',
     title: 'RingCentral',
     folderName: 'ringcentral-embeddable-mobile-template-main'
   },
-  ev: {
-    zip: 'https://github.com/ringcentral/ringcentral-embeddable-engage-voice-embeddable-mobile-template/archive/main.zip',
+  {
+    zip: 'https://github.com/ringcentral/ringcentral-embeddable-engage-voice-embeddable-mobile-template/archive/master.zip',
     title: 'RingCentral Engage Voice',
-    folderName: 'ringcentral-embeddable-engage-voice-embeddable-mobile-template-main'
+    folderName: 'ringcentral-embeddable-engage-voice-embeddable-mobile-template-master'
   }
-}
+]
 
 const choices = templates.map(k => {
   return {

@@ -19,7 +19,7 @@ For ringcentral-engage-voice-embeddable
 Create a project with RingCentral embeddable mobile framework command line tool
 
 ```sh
-npx ringcentral-embeddable-mobile-framework my-app
+npx ringcentral-embeddable-mobile-framework my-mobile-rc-app
 ```
 
 or
